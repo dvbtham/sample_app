@@ -1,0 +1,12 @@
+vi:
+  base_title: "Ruby on Rails Tutorial Sample App"
+
+  static_pages:
+    home:
+      title: "Trang chủ"
+    help:
+      title: "Trợ giúp"
+    contact:
+      title: "Liên hệ"
+    about:
+      title: "Giới thiệu"
