@@ -1,9 +1,5 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
 <p>
-  <%
-    rort_link = link_to t("rort"),
-      "http://www.railstutorial.org/"
-  %>
-  <%= raw t(".intro", rort_link: rort_link) %>
+  <%= raw t(".intro") %>
 </p>
