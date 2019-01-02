@@ -1,8 +1,52 @@
 en:
   base_title: "Ruby on Rails Tutorial Sample App"
   rails_logo: "Rails logo"
+  welcome: "Welcome to the Sample App"
   news: "News"
   app_name: "Sample App"
+  form_errors_counter:
+    one: "The form contains %{count} error."
+    other: "The form contains %{count} errors."
+  male: "Male"
+  female: "Female"
+
+  activerecord:
+    models:
+      user:
+        one: "User"
+        other: "Users"
+    attributes:
+      user:
+        name: "Name"
+        gender: "Gender"
+        email: "Email"
+        date_of_birth: "Birthday"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Please fill in your %{attribute}"
+            password:
+              blank: "Please fill in your %{attribute}"
+              too_short: "%{attribute} is too short
+                (minimum is %{count} characters)"
+              too_long: "%{attribute} is too long
+                (maximum is %{count} characters)"
+            gender:
+              blank: "Please choose a %{attribute}"
+            date_of_birth:
+              blank: "Please fill in your %{attribute}"
+            email:
+              invalid: "%{attribute} is invalid"
+              too_long: "%{attribute} is too long
+                (maximum is %{count} characters)"
+              taken: "The email address %{value} has already been registered"
+            password_confirmation:
+              blank: "Please Specify a %{attribute}"
+              confirmation: "Password does not match"
 
   static_pages:
     home:
@@ -36,6 +80,8 @@ en:
       intro: "Contact the Ruby on Rails Tutorial about the sample app at the
         <a href='http://www.railstutorial.org/contact'>contact page</a>"
   layouts:
+    messages:
+      not_found: "Sorry, the data can not be found"
     footer:
       left_text: "The <a href='http://www.railstutorial.org/''>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
@@ -44,4 +90,4 @@ en:
   users:
     new:
       title: "Sign up"
-      content: "This will be a signup page for new users."
+      submit_text: "Create my account"
