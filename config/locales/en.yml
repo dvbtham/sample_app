@@ -82,12 +82,25 @@ en:
   layouts:
     messages:
       not_found: "Sorry, the data can not be found"
+      login_failed: "Invalid email/password combination"
     footer:
       left_text: "The <a href='http://www.railstutorial.org/''>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
     header:
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Logout"
+      account: "Account"
+      users: "Users"
       login: "Login"
   users:
     new:
       title: "Sign up"
       submit_text: "Create my account"
+  sessions:
+    new:
+      login: "Login"
+      signup_now: "Sign up now!"
+      is_new_user: "New user?"
+      email: "Email"
+      password: "Password"
