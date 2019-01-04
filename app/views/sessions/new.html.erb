@@ -5,8 +5,15 @@
     <%= form_for :session, url: login_path do |f| %>
       <%= f.label t(".email") %>
       <%= f.email_field :email, class: "form-control" %>
+
       <%= f.label t(".password") %>
       <%= f.password_field :password, class: "form-control" %>
+
+      <%= f.label t(".remember_label"), class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span><%= t(".remember_me") %></span>
+      <% end %>
+
       <%= f.submit t(".login"), class: "btn btn-primary" %>
     <% end %>
     <p>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: [:show]
+  before_action :load_user, only: :show
 
   def show; end
 
@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
+    @user.gender = params[:user][:gender].to_i
     if @user.save
       log_in @user
       flash[:success] = t :welcome
@@ -19,8 +20,9 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
-    params.require(:user).permit(:name, :email, :date_of_birth, :gender,
+    params.require(:user).permit(:name, :email, :date_of_birth,
       :password, :password_confirmation)
   end
 

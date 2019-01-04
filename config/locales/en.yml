@@ -104,3 +104,5 @@ en:
       is_new_user: "New user?"
       email: "Email"
       password: "Password"
+      remember_label: "Remember me"
+      remember_me: "Remember me on this computer"

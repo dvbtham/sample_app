@@ -8,3 +8,5 @@ user:
     max_length: 50
 gravatar:
   size: 80
+remember_me:
+  checked: "1"
