@@ -14,7 +14,8 @@ class User < ApplicationRecord
 
   ActiveModel::SecurePassword::MAX_PASSWORD_LENGTH_ALLOWED =
     Settings.user.password.max_length
-  validates :password, length: {minimum: Settings.user.password.min_length}
+  validates :password, length: {minimum: Settings.user.password.min_length},
+    allow_nil: true
 
   has_secure_password
 
