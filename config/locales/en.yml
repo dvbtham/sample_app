@@ -10,6 +10,18 @@ en:
   sure_to_delete: "Are you sure that you want to delete?"
   success_delete_user: "The user was successfully deleted."
   unsuccess_delete_user: "The user was unsuccessfully deleted"
+  account_activation: "Account activation"
+  hi_user: "Hi %{name},"
+  activation_msg: "Welcome to the Sample App!
+    Click on the link below to activate your account:"
+
+  activate: "Activate"
+  password_reset: "Password reset"
+  invalid_activation_link: "Invalid activation link"
+  account_activated: "Account activated!"
+  check_mail_msg: "Please check your email to activate your account."
+  not_activated: "Account not activated.
+    Please check your email to activate your account."
 
   form_errors_counter:
     one: "The form contains %{count} error."

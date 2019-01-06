@@ -6,7 +6,9 @@ User.create!(name: "Thâm Davies",
              date_of_birth: "1996-09-15",
              password: "123123",
              password_confirmation: "123123",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 seed.users_to_create.times do |n|
   name = Faker::Name.name
@@ -20,5 +22,7 @@ seed.users_to_create.times do |n|
                gender: gender,
                date_of_birth: date_of_birth,
                password: password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end
