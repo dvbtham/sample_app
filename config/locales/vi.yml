@@ -14,11 +14,19 @@ vi:
     Bấm vào đường dẫn bên dưới để kích hoạt tài khoản:"
   activate: "Kích hoạt"
   password_reset: "Đặt lại mật khẩu"
-  invalid_activation_link: "Đường dẫn kích hoạt không hợp lệ"
+  invalid_activation_link: "Đường dẫn kích hoạt tài khoản không hợp lệ"
   account_activated: "Tài khoản đã được kích hoạt!"
-  check_mail_msg: "Vui lòng kiểm tra tài Email để kích hoạt tài khoản."
+  check_mail_msg: "Vui lòng kiểm tra email để kích hoạt tài khoản."
   not_activated: "Tài khoản chưa được kích hoạt!
     Vui lòng kiểm tra tài Email để kích hoạt tài khoản."
+  submit: "Gửi đi"
+  password_reset_email_sent: "Vui lòng làm theo hướng dẫn
+    trong email để đặt lại mật khẩu"
+  reset_complete: "Mật khẩu đã được đặt lại."
+  pass_not_empty: "Vui lòng nhập mật khẩu"
+  expired: "Không đổi được mật khẩu vì đã hết hạn"
+  update_password: "Đổi mật khẩu"
+  invalid_request: "Yêu cầu không hợp lệ"
 
   form_errors_counter: "Đã có %{count} lỗi xảy ra."
   male: "Nam"
@@ -91,6 +99,9 @@ vi:
       intro: "Contact the Ruby on Rails Tutorial about the sample app at the
         <a href='http://www.railstutorial.org/contact'>contact page</a>"
   layouts:
+    messages:
+      not_found: "Không tìm thấy dữ liệu"
+      login_failed: "Email hoặc mật khẩu không đúng"
     footer:
       left_text: "The <a href='http://www.railstutorial.org/''>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
@@ -113,3 +124,30 @@ vi:
       save_changes: "Lưu thay đổi"
     index:
       all: "Tất cả thành viên"
+
+  sessions:
+    new:
+      login: "Đăng nhập"
+      signup_now: "Đăng ký ngay!"
+      is_new_user: "Chưa có tài khoản?"
+      email: "Email"
+      password: "Mật khẩu"
+      remember_label: "Ghi nhớ"
+      remember_me: "Ghi nhớ"
+      forgot_password_label: "(quên mật khẩu)"
+
+  password_resets:
+    new:
+      text: "Quên mật khẩu"
+    to_reset_link: "Để đặt lại mật khẩu, bấm vào đường dẫn bên dưới:"
+    content_text: "Đường dẫn này sẽ hết hạn trong 2 giờ.
+      Nếu bạn không muốn đặt lại mật khẩu, vui lòng bỏ qua email này
+      và mật khẩu của bạn sẽ được giữ nguyên."
+    content_html: "<p>Đường dẫn này sẽ hết hạn trong 2 giờ.</p>
+      <p>
+        Nếu bạn không muốn đặt lại mật khẩu, xin vui lòng bỏ qua email này
+        và mật khẩu của bạn sẽ được giữ nguyên
+      </p>"
+
+  not_found:
+    email: "Không tìm thấy địa chỉ Email"

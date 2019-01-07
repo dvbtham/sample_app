@@ -17,11 +17,19 @@ en:
 
   activate: "Activate"
   password_reset: "Password reset"
+  reset_password: "Reset password"
   invalid_activation_link: "Invalid activation link"
   account_activated: "Account activated!"
   check_mail_msg: "Please check your email to activate your account."
   not_activated: "Account not activated.
     Please check your email to activate your account."
+  submit: "Submit"
+  password_reset_email_sent: "Email sent with password reset instructions"
+  reset_complete: "Password has been reset."
+  pass_not_empty: "Password can't be empty"
+  expired: "Password reset has expired."
+  update_password: "Update password"
+  invalid_request: "Invalid request"
 
   form_errors_counter:
     one: "The form contains %{count} error."
@@ -135,3 +143,20 @@ en:
       password: "Password"
       remember_label: "Remember me"
       remember_me: "Remember me on this computer"
+      forgot_password_label: "(forgot password)"
+
+  password_resets:
+    new:
+      text: "Forgot password"
+    to_reset_link: "To reset your password click the link below:"
+    content_text: "This link will expire in two hours.
+      if you did not request your password to be reset,
+      please ignore this email and your password will stay as it is."
+    content_html: "<p>This link will expire in two hours.</p>
+      <p>
+        If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is.
+      </p>"
+
+  not_found:
+    email: "Email address not found"
