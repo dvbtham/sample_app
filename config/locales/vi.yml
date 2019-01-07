@@ -3,9 +3,18 @@ vi:
   rails_logo: "Rails logo"
   news: "Tin tức"
   app_name: "Sample App"
+  profile_updated: "Hồ sơ đã được cập nhật"
+  please_login: "Vui lòng đăng nhập"
+  sure_to_delete: "Bạn có chắc chắn muốn xóa?"
+  success_delete_user: "Thành viên đã được xóa"
+  unsuccess_delete_user: "Xóa không thành công"
   form_errors_counter: "Đã có %{count} lỗi xảy ra."
   male: "Nam"
   female: "Nữ"
+  delete: "Xóa"
+  will_paginate:
+    previous_label: "Trang sau"
+    next_label: "Trang tiếp"
 
   activerecord:
     models:
@@ -73,9 +82,22 @@ vi:
     footer:
       left_text: "The <a href='http://www.railstutorial.org/''>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
+      news: "Tin tức"
     header:
       login: "Đăng nhập"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      account: "Tài khoản"
+      users: "Thành viên"
   users:
     new:
       title: "Đăng ký"
       submit_text: "Tạo tài khoản"
+    edit:
+      title: "Chỉnh sửa người dùng"
+      update_bio: "Cập nhật thông tin của bạn"
+      change: "Thay đổi"
+      save_changes: "Lưu thay đổi"
+    index:
+      all: "Tất cả thành viên"

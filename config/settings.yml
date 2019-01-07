@@ -10,3 +10,9 @@ gravatar:
   size: 80
 remember_me:
   checked: "1"
+seed:
+  min_age: 18
+  max_age: 65
+  male: 0
+  female: 1
+  users_to_create: 99

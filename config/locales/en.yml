@@ -4,6 +4,13 @@ en:
   welcome: "Welcome to the Sample App"
   news: "News"
   app_name: "Sample App"
+  profile_updated: "Profile updated"
+  please_login: "Please login"
+  delete: "Delete"
+  sure_to_delete: "Are you sure that you want to delete?"
+  success_delete_user: "The user was successfully deleted."
+  unsuccess_delete_user: "The user was unsuccessfully deleted"
+
   form_errors_counter:
     one: "The form contains %{count} error."
     other: "The form contains %{count} errors."
@@ -79,6 +86,7 @@ en:
       title: "Contact"
       intro: "Contact the Ruby on Rails Tutorial about the sample app at the
         <a href='http://www.railstutorial.org/contact'>contact page</a>"
+
   layouts:
     messages:
       not_found: "Sorry, the data can not be found"
@@ -93,10 +101,19 @@ en:
       account: "Account"
       users: "Users"
       login: "Login"
+
   users:
     new:
       title: "Sign up"
       submit_text: "Create my account"
+    edit:
+      title: "Edit user"
+      update_bio: "Update your profile"
+      change: "Change"
+      save_changes: "Save changes"
+    index:
+      all: "All users"
+
   sessions:
     new:
       login: "Login"

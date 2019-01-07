@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       else
         forget @user
       end
-      redirect_to @user
+      redirect_back_or @user
     else
       flash.now[:danger] = t "layouts.messages.login_failed"
       render :new
@@ -28,7 +28,6 @@ class SessionsController < ApplicationController
   def load_user_by_mail
     @user = User.find_by email: params[:session][:email].downcase
     return if @user
-
     flash[:danger] = t "layouts.messages.not_found"
   end
 end
