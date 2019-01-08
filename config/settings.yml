@@ -19,3 +19,5 @@ seed:
 fixtures:
   users_to_create: 30
 password: "password"
+expired: 2
+no_reply_mail: "noreply@thamdavies.com"

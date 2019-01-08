@@ -1,5 +1,5 @@
 <h1><%= t :app_name %></h1>
-<p><%= t(:hi_user, name: @user.name) %> </p>
+<p><%= t(:hi_user, name: @user.name) %></p>
 <p><%= t :activation_msg %></p>
 <%= link_to t(:activate), edit_account_activation_url(id: @user.activation_token,
   email: @user.email) %>
