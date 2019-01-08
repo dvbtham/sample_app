@@ -11,12 +11,15 @@ gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.6"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "carrierwave", "1.3.1"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "faker", "1.9.1"
 gem "figaro", "1.1.1"
+gem "i18n-js", "3.2.0"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3"
+gem "mini_magick", "4.9.2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"
 gem "rails-controller-testing"
@@ -45,6 +48,7 @@ group :test do
 end
 
 group :production do
+  gem "fog"
   gem "pg", "0.18.4"
 end
 

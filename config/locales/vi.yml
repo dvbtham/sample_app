@@ -3,6 +3,7 @@ vi:
   rails_logo: "Rails logo"
   news: "Tin tức"
   app_name: "Sample App"
+  welcome: "Chào mừng bạn đến với Sample App"
   profile_updated: "Hồ sơ đã được cập nhật"
   please_login: "Vui lòng đăng nhập"
   sure_to_delete: "Bạn có chắc chắn muốn xóa?"
@@ -47,8 +48,14 @@ vi:
         date_of_birth: "Ngày sinh"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+      micropost:
+        content: "Nội dung"
     errors:
       models:
+        micropost:
+          attributes:
+            content:
+              blank: "Vui lòng nhập %{attribute}"
         user:
           attributes:
             name:
@@ -71,7 +78,6 @@ vi:
 
   static_pages:
     home:
-      h1: Welcome to the Sample App
       title: "Trang chủ"
       sign_up: "Đăng ký ngay!"
       intro: "This is the home page for the
@@ -151,3 +157,30 @@ vi:
 
   not_found:
     email: "Không tìm thấy địa chỉ Email"
+
+  microposts:
+    posted_at: "Đăng vào %{date} trước."
+    with_posts: "Bài đăng (%{count})"
+    created: "Đăng viết thành công."
+    compose: "Nội dung bài viết..."
+    post: "Đăng"
+    feed: "Bài viết của bạn"
+    created: "Bài viết đã được đăng."
+    deleted: "Bài viết đã được xóa"
+
+  datetime:
+    distance_in_words:
+      x_days: "%{count} ngày"
+      about_x_hours: "%{count} giờ"
+      x_minutes: "%{count} phút"
+      less_than_x_minutes: " vài giây trước"
+  errors:
+    messages:
+      extension_whitelist_error: "Tệp không hợp lệ,
+        chỉ cho phép: %{allowed_types}"
+      max_size_error: "Kích thước hình ảnh không quá %{max_size}"
+  picture:
+    max_size: "Kích thước hình ảnh không quá %{max_size}MB"
+
+  view_profile: "xem chi tiết"
+  micropost: "%{count} bài viết"

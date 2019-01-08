@@ -14,5 +14,8 @@
 //= require bootstrap
 //= require rails-ujs
 //= require activestorage
+//= require i18n
+//= require i18n/translations
+//= require localization
 //= require turbolinks
 //= require_tree .

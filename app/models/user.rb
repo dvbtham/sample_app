@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :microposts, dependent: :destroy
   scope :activated, ->{where activated: true}
 
   before_save{email.downcase!}
@@ -9,7 +10,7 @@ class User < ApplicationRecord
 
   enum gender: [:male, :female]
 
-  validates :name, :gender, :date_of_birth, presence: true
+  validates :name, :email, :gender, :date_of_birth, presence: true
   validates :name, length: {maximum: Settings.user.name.max_length}
   validates :email, length: {maximum: Settings.user.email.max_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}

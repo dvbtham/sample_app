@@ -52,6 +52,10 @@ en:
         password_confirmation: "Password confirmation"
     errors:
       models:
+        micropost:
+          attributes:
+            content:
+              blank: "Please fill in your %{attribute}"
         user:
           attributes:
             name:
@@ -67,6 +71,7 @@ en:
             date_of_birth:
               blank: "Please fill in your %{attribute}"
             email:
+              blank: "Please fill in your %{attribute}"
               invalid: "%{attribute} is invalid"
               too_long: "%{attribute} is too long
                 (maximum is %{count} characters)"
@@ -77,7 +82,6 @@ en:
 
   static_pages:
     home:
-      h1: Welcome to the Sample App
       title: "Home"
       sign_up: "Sign up now!"
       intro: "This is the home page for the
@@ -160,3 +164,20 @@ en:
 
   not_found:
     email: "Email address not found"
+
+  microposts:
+    posted_at: "Posted %{date} ago."
+    with_posts: "Microposts (%{count})"
+    created: "Micropost created."
+    deleted: "Micropost deleted."
+    cant_deleted: "Micropost can't be deleted"
+    compose: "Compose new micropost..."
+    post: "Post"
+    feed: "Micropost feed"
+  picture:
+    max_size: "Picture should be less than %{max_size}MB"
+
+  view_profile: "view my profile"
+  micropost:
+    one: "%{count} micropost"
+    other: "%{count} microposts"

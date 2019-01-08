@@ -8,6 +8,7 @@ user:
     max_length: 50
 gravatar:
   size: 80
+  post_size: 50
 remember_me:
   checked: "1"
 seed:
@@ -15,9 +16,20 @@ seed:
   max_age: 65
   male: 0
   female: 1
-  users_to_create: 99
+  users_to_create: 50
+  post_to_create: 50
 fixtures:
   users_to_create: 30
 password: "password"
 expired: 2
 no_reply_mail: "noreply@thamdavies.com"
+micropost:
+  area_rows: 5
+  content:
+    max_length: 140
+picture:
+  max_size: 5
+  accept: "image/jpeg,image/gif,image/png"
+per_page:
+  users: 20
+  microposts: 30
