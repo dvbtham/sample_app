@@ -2,10 +2,9 @@ class UsersController < ApplicationController
   before_action :load_user, only: %i(show edit update destroy correct_user)
   before_action :logged_in_user, only: %i(index edit update)
   before_action :correct_user, only: %i(edit update)
-  before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.activated.paginate(page: params[:page])
   end
 
   def show; end
@@ -30,9 +29,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
     @user.gender = params[:user][:gender].to_i
     if @user.save
-      log_in @user
-      flash[:success] = t :welcome
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t :check_mail_msg
+      redirect_to root_path
     else
       render :new
     end
@@ -58,14 +57,12 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
-
     flash[:danger] = t "layouts.messages.not_found"
     redirect_to root_path
   end
 
   def logged_in_user
     return if logged_in?
-
     store_location
     flash[:danger] = t :please_login
     redirect_to login_path

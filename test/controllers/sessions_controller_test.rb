@@ -5,9 +5,4 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     get login_path
     assert_response :success
   end
-
-  test "should get create" do
-    post login_path
-    assert_response :success
-  end
 end

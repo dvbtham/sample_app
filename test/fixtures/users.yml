@@ -1,9 +1,47 @@
 tham:
   name: Thâm
   email: thamdv96@gmail.com
+  gender: User.genders[:male]
+  date_of_birth: "1996-09-15"
   password_digest: <%= User.digest("password") %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 archer:
   name: Sterling Archer
   email: duchess@example.gov
+  gender: User.genders[:male]
+  date_of_birth: "1996-09-15"
   password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  gender: User.genders[:female]
+  date_of_birth: "1996-09-15"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+  gender: User.genders[:male]
+  date_of_birth: "1996-09-15"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+<% Settings.fixtures.users_to_create.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  gender: User.genders[:male]
+  date_of_birth: "1996-09-15"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>

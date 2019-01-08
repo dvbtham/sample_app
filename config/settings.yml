@@ -16,3 +16,6 @@ seed:
   male: 0
   female: 1
   users_to_create: 99
+fixtures:
+  users_to_create: 30
+password: "password"

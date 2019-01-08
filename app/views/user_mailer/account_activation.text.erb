@@ -1,0 +1,5 @@
+<%= t(:hi_user, name: @user.name) %>
+<%= t :activation_msg %>
+
+<%= edit_account_activation_url(id: @user.activation_token,
+  email: @user.email) %>
