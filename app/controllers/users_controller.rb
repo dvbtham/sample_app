@@ -4,10 +4,14 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
 
   def index
-    @users = User.activated.paginate(page: params[:page])
+    @users = User.activated.paginate(page: params[:page],
+      per_page: Settings.per_page.users)
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate(page: params[:page],
+      per_page: Settings.per_page.microposts)
+  end
 
   def edit; end
 
@@ -59,13 +63,6 @@ class UsersController < ApplicationController
     return if @user
     flash[:danger] = t "layouts.messages.not_found"
     redirect_to root_path
-  end
-
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t :please_login
-    redirect_to login_path
   end
 
   def correct_user

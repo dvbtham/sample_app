@@ -220,3 +220,10 @@ input {
     }
   }
 }
+
+.timestamp {
+  a[data-method="delete"] {
+      text-transform: lowercase;
+      padding-left: 4px;
+    }
+}

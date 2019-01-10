@@ -5,7 +5,7 @@
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
-  <body>
+  <body data-locale="<%= I18n.locale %>">
     <%= render "layouts/header" %>
     <div class="container">
       <% flash.each do |message_type, message| %>
