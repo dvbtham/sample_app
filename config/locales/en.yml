@@ -116,8 +116,9 @@ en:
       not_found: "Sorry, the data can not be found"
       login_failed: "Invalid email/password combination"
     footer:
-      left_text: "The <a href='http://www.railstutorial.org/''>
+      left_text: "The <a href='http://www.railstutorial.org/'>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
+      news: "News"
     header:
       profile: "Profile"
       settings: "Settings"
@@ -181,3 +182,14 @@ en:
   micropost:
     one: "%{count} micropost"
     other: "%{count} microposts"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "Following"
+  follower:
+    one: "Follower"
+    other: "Followers"
+  follow_success: "Success following %{user}"
+  unfollow_success: "Success unfollowing %{user}"
+  error_occurs: "An error occurs! Please try again"
+  search: "Search"
+  search_for: "Enter name, email ..."
