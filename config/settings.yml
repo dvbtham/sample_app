@@ -32,4 +32,6 @@ picture:
   accept: "image/jpeg,image/gif,image/png"
 per_page:
   users: 20
-  microposts: 30
+  microposts: 15
+min_birthday: "1905-01-01"
+min_age: 16

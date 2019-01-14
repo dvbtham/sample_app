@@ -1,11 +1,17 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update destroy correct_user)
+  before_action :load_user, only: %i(show edit update destroy
+    correct_user following followers)
   before_action :logged_in_user, only: %i(index edit update)
   before_action :correct_user, only: %i(edit update)
 
   def index
-    @users = User.activated.paginate(page: params[:page],
-      per_page: Settings.per_page.users)
+    @users = User.activated
+    @users = if params[:search].present?
+               @users.search_by params[:search][:query]
+             else
+               @users
+             end.paginate(page: params[:page],
+    per_page: Settings.per_page.users)
   end
 
   def show
@@ -49,6 +55,18 @@ class UsersController < ApplicationController
       flash[:danger] = t :unsuccess_delete_user
       redirect_to root_path
     end
+  end
+
+  def following
+    @title = t "following", count: @user.following.count
+    @users = @user.following.paginate page: params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t "follower", count: @user.followers.count
+    @users = @user.followers.paginate page: params[:page]
+    render :show_follow
   end
 
   private

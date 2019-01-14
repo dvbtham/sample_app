@@ -1,6 +1,19 @@
 <% provide(:title, t(".all")) %>
 <h1><%= t ".all" %></h1>
-
+<div class="row">
+  <%= form_for :search, enforce_utf8: false, method: :get do |f| %>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <%= f.text_field(:query,
+        value: (params[:search][:query] if params[:search].present?),
+        class: "form-control", placeholder: t(:search_for)) %>
+      <span class="input-group-btn">
+        <%= f.submit t(:search), class: "btn btn-primary", name: nil %>
+      </span>
+    </div>
+  </div>
+<% end %>
+</div>
 <%= will_paginate %>
   <ul class="users">
     <%= render @users %>

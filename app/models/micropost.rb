@@ -6,6 +6,7 @@ class Micropost < ApplicationRecord
   validate :picture_size
 
   scope :recent_posts, ->{order created_at: :desc}
+  scope :feed, ->(user_ids){where user_id: user_ids}
   mount_uploader :picture, PictureUploader
 
   private

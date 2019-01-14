@@ -1,7 +1,17 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
+
   scope :activated, ->{where activated: true}
+  scope :search_by, (lambda do |query|
+    where "name like ? or email like ?", "%#{query}%", "%#{query}%"
+  end)
 
   before_save{email.downcase!}
   before_create :create_activation_digest
@@ -11,6 +21,7 @@ class User < ApplicationRecord
   enum gender: [:male, :female]
 
   validates :name, :email, :gender, :date_of_birth, presence: true
+  validates :date_of_birth, birthday: true, if: :date_of_birth?
   validates :name, length: {maximum: Settings.user.name.max_length}
   validates :email, length: {maximum: Settings.user.email.max_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
@@ -19,6 +30,7 @@ class User < ApplicationRecord
     Settings.user.password.max_length
   validates :password, length: {minimum: Settings.user.password.min_length},
     allow_nil: true
+
 
   has_secure_password
 
@@ -83,10 +95,29 @@ class User < ApplicationRecord
     reset_sent_at < Settings.expired.hours.ago
   end
 
+  # Follows a user.
+  def follow other_user
+    following << other_user
+  end
+
+  # Unfollows a user.
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  # Returns true if the current user is following the other user.
+  def following? other_user
+    following.include? other_user
+  end
+
   private
 
   def create_activation_digest
     self.activation_token = User.new_token
     self.activation_digest = User.digest activation_token
+  end
+
+  def date_of_birth?
+    date_of_birth.present?
   end
 end

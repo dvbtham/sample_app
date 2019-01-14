@@ -109,7 +109,7 @@ vi:
       not_found: "Không tìm thấy dữ liệu"
       login_failed: "Email hoặc mật khẩu không đúng"
     footer:
-      left_text: "The <a href='http://www.railstutorial.org/''>
+      left_text: "The <a href='http://www.railstutorial.org/'>
         Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
       news: "Tin tức"
     header:
@@ -164,7 +164,7 @@ vi:
     created: "Đăng viết thành công."
     compose: "Nội dung bài viết..."
     post: "Đăng"
-    feed: "Bài viết của bạn"
+    feed: "Bài viết"
     created: "Bài viết đã được đăng."
     deleted: "Bài viết đã được xóa"
 
@@ -184,3 +184,16 @@ vi:
 
   view_profile: "xem chi tiết"
   micropost: "%{count} bài viết"
+  follow: "Theo dõi"
+  unfollow: "Bỏ theo dõi"
+  following: "Đang theo dõi"
+  follower:
+    one: "Theo dõi"
+    other: "Người theo dõi"
+  follow_success: "Bạn đang bắt đầu theo dõi %{user}"
+  unfollow_success: "Bỏ theo dõi %{user}"
+  error_occurs: "Đã xảy ra lỗi! Vui lòng thử lại sau."
+  search: "Tìm kiếm"
+  search_for: "Nhập họ tên, email ..."
+  validators:
+    birthday: "Please correct your birthday between (%{min_year} - %{max_year})"
