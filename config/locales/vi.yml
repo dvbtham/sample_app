@@ -109,8 +109,7 @@ vi:
       not_found: "Không tìm thấy dữ liệu"
       login_failed: "Email hoặc mật khẩu không đúng"
     footer:
-      left_text: "The <a href='http://www.railstutorial.org/'>
-        Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
+      left_text: "The <a href='/'>Sample App</a> created by Tham Davies"
       news: "Tin tức"
     header:
       login: "Đăng nhập"

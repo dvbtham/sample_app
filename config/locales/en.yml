@@ -116,8 +116,7 @@ en:
       not_found: "Sorry, the data can not be found"
       login_failed: "Invalid email/password combination"
     footer:
-      left_text: "The <a href='http://www.railstutorial.org/'>
-        Ruby on Rails Tutorial</a> by <a href='#'>Tham Davies</a>"
+      left_text: "The <a href='/'>Sample App</a> created by Tham Davies"
       news: "News"
     header:
       profile: "Profile"

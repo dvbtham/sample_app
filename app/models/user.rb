@@ -10,7 +10,8 @@ class User < ApplicationRecord
 
   scope :activated, ->{where activated: true}
   scope :search_by, (lambda do |query|
-    where "name like ? or email like ?", "%#{query}%", "%#{query}%"
+    where "lower(name) like ? or lower(email) like ?",
+      "%#{query.downcase}%", "%#{query.downcase}%"
   end)
 
   before_save{email.downcase!}
@@ -30,7 +31,6 @@ class User < ApplicationRecord
     Settings.user.password.max_length
   validates :password, length: {minimum: Settings.user.password.min_length},
     allow_nil: true
-
 
   has_secure_password
 

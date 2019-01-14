@@ -19,3 +19,8 @@
 //= require localization
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  if($('nav .dropdown-menu li').hasClass('active'))
+    $('nav .dropdown-menu').parent().addClass('active')
+})

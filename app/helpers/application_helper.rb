@@ -9,4 +9,8 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def active_nav link_path
+    :active if current_page? link_path
+  end
 end
